@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import chitkaraLogo from "../assets/chitlogo.png";
+import Logo from "../assets/Logo.jpg";
 import avatar from "../assets/avatar.svg";
 import Image from "next/image";
 import toast, { Toaster } from 'react-hot-toast';
@@ -58,13 +58,13 @@ export default function Navbar() {
             <div className="w-full flex">
                 <div className="flex items-center justify-center">
                     <Image
-                        src={chitkaraLogo}
+                        src={Logo}
                         alt="Evetease"
                         height={1000}
                         width={1000}
                         className="w-8 h-8 rounded-full object-contain mr-2"
                     />
-                    <p className="font-semibold">EVENTEASE</p>
+                    <p className="font-semibold">POMODORO</p>
                 </div>
                 <ul className="flex items-center justify-start gap-16 w-full font-normal text-gray-800 ml-20">
                     <li>

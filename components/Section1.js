@@ -6,7 +6,7 @@ import HeaderImg from "../assets/HeadSideImg.png";
 export default function Section1() {
     return (
         <div className="h-screen w-screen overflow-hidden mt-6 relative">
-            <div className="absolute h-full w-full left-20 top-0">
+            <div className="absolute h-full w-full  top-0">
                 <div className="">
                     <Image
                         src={backgroundImage}
@@ -22,14 +22,14 @@ export default function Section1() {
                             Explore Your Potential
                             <span className="material-symbols-outlined">redeem</span>
                         </div>
-                        <div className="text-6xl text-[#F85E9F] font-bold">
-                            <span className="text-white">Explore</span> <span>the</span>{" "}
-                            <div>possibilities</div>
+                        <div className="text-5xl text-[#F85E9F] font-bold">
+                            <span className="text-white">Build a better</span> <span>relationship</span>{" "}
+                            <div>with your work</div>
                         </div>
                         <div>
-                            <p className="text-gray-400">
-                                We always make our customer happy by providing as many choices
-                                as possible{" "}
+                            <p className="text-gray-400 ">
+                                We help feel more connected to your professional life through
+                                keeping track of your time and communicating better.{" "}
                             </p>
                         </div>
                         <div className="flex items-center justify-center gap-6 text-sm">
@@ -45,8 +45,8 @@ export default function Section1() {
                         <Image
                             src={HeaderImg}
                             alt="card-image"
-                            width={1000}
-                            height={1000}
+                            width={900}
+                            height={900}
                             className="h-full w-full object-contain rounded-full"
                         />
                     </div>
