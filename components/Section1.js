@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import backgroundImage from "../assets/solid-black background.jpg";
-import HeaderImg from "../assets/HeadSideImg.png";
+import HeaderImg from "../assets/24770099_08.jpg";
 
 export default function Section1() {
     return (
@@ -18,11 +18,11 @@ export default function Section1() {
                 </div>
                 <div className="text-white absolute top-0 left-0 flex items-center justify-start h-full w-full" id="sectio1-header">
                     <div className="h-full gap-12 flex items-start justify-center flex-col pl-24">
-                        <div className="rounded-full text-[#F85E9F] bg-white py-3 font-semibold px-6 flex items-center justify-center gap-2">
+                        <div className="rounded-full text-[#343437] bg-white py-3 font-semibold px-6 flex items-center justify-center gap-2">
                             Explore Your Potential
                             <span className="material-symbols-outlined">redeem</span>
                         </div>
-                        <div className="text-5xl text-[#F85E9F] font-bold">
+                        <div className="text-5xl text-[#858eae] font-bold">
                             <span className="text-white">Build a better</span> <span>relationship</span>{" "}
                             <div>with your work</div>
                         </div>
