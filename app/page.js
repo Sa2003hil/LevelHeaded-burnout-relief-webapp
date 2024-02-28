@@ -5,6 +5,7 @@ import SubscribeNew from '@/components/Subscribe'
 import Reviews from '@/components/Crousel'
 import Cta from '@/components/Cta'
 import Howitworks from '@/components/howitworks'
+import Cards from '@/components/Cards'
 
 export default function Home() {
   return (
@@ -18,9 +19,14 @@ export default function Home() {
       <div className="flex w-[90%]">
         <Cta />
       </div>
-      <div className='h-full w-screen px-40'>
-        <SubscribeNew />
+      <div className=" w-[95%]">
+        <Cards />
       </div>
+
+
+      {/* <div className='h-full w-screen px-40'>
+        <SubscribeNew />
+      </div> */}
 
     </div>
   )
