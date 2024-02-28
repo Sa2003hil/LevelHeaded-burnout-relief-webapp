@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  overflow-x: hidden;
+}
+
+.hide-scroll-bar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+::-webkit-scrollbar:hover {
+  height: 8px;
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(79, 79, 79); 
+  border-radius: 10px;
+}
+
+#sign-in-button{
+  position: relative;
+}
+#sign-in-button:active{
+  transform: scale(90%);
+  transition: .2s;
+}
+#sign-in-button::after{
+  position: absolute;
+  transition: .2s ease-in-out;
+  content: "";
+  height: 2px;
+  width: 50%;
+  background: #4461F2;
+  bottom: -5px;
+  left: 50%;
+  border-radius: 10px;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+#sign-in-button:hover:after{
+  width: 100%;
+}
+
+#sectio1-header::after{
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 10px;
+  background: transparent;
+  top: 0;
+  box-shadow: 85px 85px 200px 60px white;
+}
+#registerDiv::after{
+  position: relative;
+  content: "";
+  height: 10px;
+  width: 10px;
+  background: transparent;
+  top: 0;
+  left: -100px;
+  box-shadow: 265px -15px 180px 60px rgb(204, 66, 219);
+}
