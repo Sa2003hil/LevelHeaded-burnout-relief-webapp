@@ -1,11 +1,19 @@
-import React from 'react'
+"use client"
+import React, { useEffect } from 'react'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 const Cards = () => {
+    useEffect(() => {
+        AOS.init({
+        })
+    }, [])
     return (
         <section className="pt-20 pb-12 lg:pt-[120px] lg:pb-[90px] dark:bg-dark" id="features">
             <div className="container mx-auto ">
                 <div className="-mx-4 flex flex-wrap ">
-                    <div className="w-full px-4">
+                    <div data-aos="fade-up" className="w-full px-4">
                         <div className="mx-auto mb-12 max-w-[510px] text-center lg:mb-20">
                             <span className="text-purple-500 mb-2 block text-lg font-semibold">
                                 Our Softwares
@@ -21,7 +29,7 @@ const Cards = () => {
                     </div>
                 </div>
                 <div className="-mx-4 flex flex-wrap ">
-                    <div className="w-full px-4 md:w-1/2 lg:w-1/3">
+                    <div data-aos="flip-left" className="w-full px-4 md:w-1/2 lg:w-1/3">
                         <div className="shadow-lg mb-9 rounded-[20px] bg-white dark:bg-dark-2 p-10 shadow-2 hover:shadow-lg md:px-7 xl:px-10">
                             <div className="bg-black mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl">
                                 <svg
@@ -47,7 +55,7 @@ const Cards = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="w-full px-4 md:w-1/2 lg:w-1/3">
+                    <div data-aos="flip-left" className="w-full px-4 md:w-1/2 lg:w-1/3">
                         <div className=" shadow-lg mb-9 rounded-[20px] bg-white dark:bg-dark-2 p-10 shadow-2 hover:shadow-lg md:px-7 xl:px-10">
                             <div className="bg-black mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl">
                                 <svg
@@ -84,7 +92,7 @@ const Cards = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="w-full px-4 md:w-1/2 lg:w-1/3">
+                    <div data-aos="flip-left" className="w-full px-4 md:w-1/2 lg:w-1/3">
                         <div className="shadow-lg mb-9 rounded-[20px] bg-white dark:bg-dark-2 p-10 shadow-2 hover:shadow-lg md:px-7 xl:px-10">
                             <div className="bg-black mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl">
                                 <svg

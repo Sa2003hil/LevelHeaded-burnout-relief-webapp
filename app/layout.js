@@ -25,6 +25,7 @@ export default function RootLayout({ children }) {
           rel='stylesheet'
           href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200'
         />
+        <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
         <AuthProvider>
           <div className='sticky top-0 left-0 z-50 '>
             <Navbar />

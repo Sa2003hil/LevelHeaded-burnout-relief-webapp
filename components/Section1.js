@@ -5,7 +5,7 @@ import HeaderImg from "../assets/24770099_08.jpg";
 
 export default function Section1() {
     return (
-        <div className="h-screen w-screen overflow-hidden mt-6 relative">
+        <div className="h-screen w-screen overflow-hidden mt-6 relative" data-aos="fade-down">
             <div className="absolute h-full w-full  top-0">
                 <div className="">
                     <Image
@@ -22,7 +22,7 @@ export default function Section1() {
                             Explore Your Potential
                             <span className="material-symbols-outlined">redeem</span>
                         </div>
-                        <div className="text-5xl text-[#858eae] font-bold">
+                        <div className="text-5xl text-[#858eae] font-bold" data-aos="fade-right">
                             <span className="text-white">Build a better</span> <span>relationship</span>{" "}
                             <div>with your work</div>
                         </div>

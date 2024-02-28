@@ -6,7 +6,7 @@ const Cta = () => {
             <section className="  bg-white" id="contact">
                 <div className="container mx-auto ">
                     <div className="relative z-10 overflow-hidden rounded bg-[#6a7498] py-12 px-8 md:p-[70px]">
-                        <div className="flex flex-wrap items-center -mx-4">
+                        <div data-aos="fade" className="flex flex-wrap items-center -mx-4">
                             <div className="w-full px-4 lg:w-1/2">
                                 <span className="block mb-4 text-base font-medium text-white">
                                     Find Your Next Dream App

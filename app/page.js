@@ -1,3 +1,5 @@
+"use client"
+
 import Image from 'next/image'
 import Section1 from '@/components/Section1'
 // import Footer from '@/components/Footer'
@@ -6,8 +8,15 @@ import Reviews from '@/components/Crousel'
 import Cta from '@/components/Cta'
 import Howitworks from '@/components/howitworks'
 import Cards from '@/components/Cards'
+import { React, useEffect } from 'react'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({
+    })
+  }, [])
   return (
     <div className="flex flex-col items-center justify-center gap-28">
       <div id="Section-1">
