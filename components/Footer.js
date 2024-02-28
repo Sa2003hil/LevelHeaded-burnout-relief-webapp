@@ -2,7 +2,7 @@
 import { Typography } from "@material-tailwind/react";
 import { Avatar } from "@material-tailwind/react";
 import Image from "next/image";
-import chitlogo from '../assets/chitlogo.png'
+import Logo from '../assets/Logo.jpg'
 
 const SITEMAP = [
     {
@@ -32,9 +32,16 @@ export default function Footer() {
                 <div className="mx-auto grid w-full grid-cols-1 gap-8 py-12 md:grid-cols-2 lg:grid-cols-4 mb-8">
                     <div className="text-white flex flex-col gap-4 items-start justify-start">
                         <div className="flex items-center justify-center gap-2">
-                            <img src="http://localhost:3000/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fchitlogo.bb22c118.png&w=2048&q=75" className=" rounded-full" height={30} width={30} alt="" />
+                            {/* <img src="http://localhost:3000/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fchitlogo.bb22c118.png&w=2048&q=75" className=" rounded-full" height={30} width={30} alt="" /> */}
+                            <Image
+                                src={Logo}
+                                alt="Evetease"
+                                height={1000}
+                                width={1000}
+                                className="w-8 h-8 rounded-full object-contain mr-2"
+                            />
                             <p className=" text-2xl uppercase tracking-widest font-bold text-[#F85E9F]">
-                                Evetease
+                                Pomodoro
                             </p>
                         </div>
                         <p className="w-3/4 text-lg text-gray-700">
@@ -74,7 +81,7 @@ export default function Footer() {
                         variant="small"
                         className="mb-4 text-center font-normal text-white md:mb-0"
                     >
-                        &copy; {currentYear} <a href="#">Chitkara University</a>. All Rights
+                        &copy; {currentYear} <a href="#">Pomodoro</a>. All Rights
                         Reserved.
                     </Typography>
                     <div className="flex gap-4 text-white sm:justify-center">
