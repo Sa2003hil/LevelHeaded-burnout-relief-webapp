@@ -4,6 +4,7 @@ import Section1 from '@/components/Section1'
 import SubscribeNew from '@/components/Subscribe'
 import Reviews from '@/components/Crousel'
 import Cta from '@/components/Cta'
+import Howitworks from '@/components/howitworks'
 
 export default function Home() {
   return (
@@ -11,15 +12,16 @@ export default function Home() {
       <div id="Section-1">
         <Section1 />
       </div>
-      <div className='h-full w-screen px-40'>
-        <SubscribeNew />
+      <div className="w-full h-full">
+        <Howitworks />
       </div>
-      {/* <div className=' h-full w-screen m-auto justify-center mb-10 flex px-40'>
-        <Reviews />
-      </div> */}
       <div className="flex w-[90%]">
         <Cta />
       </div>
+      <div className='h-full w-screen px-40'>
+        <SubscribeNew />
+      </div>
+
     </div>
   )
 }
