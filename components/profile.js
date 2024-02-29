@@ -106,7 +106,7 @@ export default function Profile() {
                 </div>
             </div>
             <div>
-                <Typography variant="h4" color="blue-gray" className="flex absolute px-10 py-24 flex-col text-3xl gap-1 mb-8">
+                <Typography variant="h4" color="blue-gray" className="flex absolute px-10 py-24 flex-col text-3xl gap-1 mb-8 text-pink-400">
                     Update Your Profile
                     {/* <span>directly procced</span> */}
                 </Typography>
