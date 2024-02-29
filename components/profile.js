@@ -10,6 +10,9 @@ import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import toast, { Toaster } from 'react-hot-toast';
 import { useAuth } from "@/context/authContext";
+// aos animation
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function Profile() {
     const { updateAuthData } = useAuth();
@@ -28,6 +31,11 @@ export default function Profile() {
             setButtonDisabled(true)
         }
     }, [user])
+
+    useEffect(() => {
+        Aos.init({});
+    }
+        , []);
 
 
     const onLogin = async () => {
@@ -55,7 +63,7 @@ export default function Profile() {
         <div className="flex py-10 gap-12 m-auto w-full relative">
             <Toaster />
 
-            <div class="relative h-[70vh] flex flex-col text-gray-700 bg-white shadow-md w-[30vw] rounded-xl bg-clip-border">
+            <div class="relative h-[70vh] flex flex-col text-gray-700 bg-white shadow-md w-[30vw] rounded-xl bg-clip-border" data-aos="fade-up">
                 <Typography color="blue-gray" className="flex justify-center m-auto text-gray-500 text-2xl font-thin  gap-1 mb-3">
                     Update Your Profile
                 </Typography>
@@ -105,12 +113,12 @@ export default function Profile() {
 
                 </div>
             </div>
-            <div>
-                <Typography variant="h4" color="blue-gray" className="flex absolute px-10 py-24 flex-col text-3xl gap-1 mb-8 text-pink-400">
+            <div >
+                <Typography variant="h4" color="blue-gray" className="flex absolute px-10 py-24 flex-col text-3xl gap-1 mb-8 text-pink-400" data-aos="fade">
                     Update Your Profile
                     {/* <span>directly procced</span> */}
                 </Typography>
-                <Typography color="gray" className="mt-4  px-10 py-48  absolute font-medium flex flex-col" id="registerDiv">
+                <Typography color="gray" className="mt-4  px-10 py-48  absolute font-medium flex flex-col" id="registerDiv" data-aos="fade">
                     if you want to update
                     <span>you can <Link href="/register" className="text-blue-800 font-semibold"> do here!</Link></span>
                 </Typography>
@@ -119,6 +127,7 @@ export default function Profile() {
                     height={700}
                     width={700}
                     src={prof}
+                    data-aos="fade-left"
                 />
 
             </div>
