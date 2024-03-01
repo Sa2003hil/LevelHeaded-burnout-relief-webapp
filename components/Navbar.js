@@ -105,7 +105,10 @@ export default function Navbar() {
                                             </span>
                                         </p>
                                     )}
-                                    <Link href="/profile">My Profile</Link>
+                                    <div className="flex flex-col gap-4 py-1 px-2 ">
+                                        <Link href="/profile">My Profile</Link>
+                                        <Link href="/dashboard">Dashboard</Link>
+                                    </div>
                                     <hr className=" m-auto justify-center text-center" />
                                     <button
                                         className="py-2 px-4 my-5 cursor-pointer hover:bg-white transition-all hover:border hover:border-black ease-in hover:text-black bg-black rounded-full text-white"
