@@ -33,7 +33,8 @@ export async function POST(request) {
         }
 
         // create token
-        const token = await jwt.sign(tokenData, process.env.TOKEN_SECRET, { expiresIn: '1d' })
+        const token = jwt.sign(tokenData, process.env.TOKEN_SECRET, { expiresIn: '1d' })
+
 
         // set this token to the user cookie
         const response = NextResponse.json({
@@ -44,7 +45,6 @@ export async function POST(request) {
                 username: user.username,
             }
         })
-
         response.cookies.set("token", token, {
             httpOnly: true,
         })

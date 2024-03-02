@@ -33,14 +33,14 @@ export default function SignIn() {
     const onLogin = async () => {
         try {
             setLoading(true);
-            const res = await axios.post("/api/users/login", user);
+            const res = await axios.post("/api/users/signIn", user);
             console.log("login success", res.data);
             const { token, userN } = res.data;
             updateAuthData({ token, userN });
             toast.success("Login Successful");
             setTimeout(() => {
                 router.push("/");
-            }, 3000);
+            }, 1000);
         } catch (error) {
             console.log("login failed", error.message);
             toast.error(error.message);
