@@ -19,7 +19,8 @@
     "next": "14.0.4",
     "react": "^18",
     "react-dom": "^18",
-    "react-hot-toast": "^2.4.1"
+    "react-hot-toast": "^2.4.1",
+    "react-secure-storage": "^1.3.2"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.2",

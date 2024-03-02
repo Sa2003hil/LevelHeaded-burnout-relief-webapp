@@ -8,6 +8,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/context/authContext";
+import secureLocalStorage from "react-secure-storage";
 
 
 export default function Navbar() {
@@ -16,20 +17,29 @@ export default function Navbar() {
     const [scrolling, setScrolling] = useState(false);
     const [showDropdown, setShowDropdown] = useState(false);
 
-    const handleScroll = () => {
-        if (window.scrollY > 0) {
-            setScrolling(true);
-        } else {
-            setScrolling(false);
-        }
-    };
-
     useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 0) {
+                setScrolling(true);
+            } else {
+                setScrolling(false);
+            }
+        };
+
         window.addEventListener("scroll", handleScroll);
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);
+
+    const tokenEncryption = secureLocalStorage.getItem("token");
+
+    // useEffect(() => {
+    //     window.addEventListener("scroll", handleScroll);
+    //     return () => {
+    //         window.removeEventListener("scroll", handleScroll);
+    //     };
+    // }, []);
 
     const toggleDropdown = () => {
         setShowDropdown(!showDropdown);
@@ -40,6 +50,7 @@ export default function Navbar() {
         try {
             logout();
             await axios.get('/api/users/logout');
+            secureLocalStorage.clear();
             toast.success("Logged out successfully");
             setTimeout(() => {
                 router.push('/signIn');
@@ -80,8 +91,8 @@ export default function Navbar() {
                         <Link href="/contact">Contact</Link>
                     </li>
                 </ul>
-                <div className="ml-auto">
-                    {authData.token ? (
+                <div className="ml-auto" >
+                    {tokenEncryption ? (
                         <div className="relative">
                             <div
                                 onClick={toggleDropdown}
