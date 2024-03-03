@@ -5,16 +5,16 @@ export function middleware(request) {
     // return NextResponse.redirect(new URL('/home', request.url))
     const path = request.nextUrl.pathname
 
-    const isPublicPath = path === '/signIn' || path === '/register';
+    const isPublicPath = path === '/signIn' || path === '/register' || path === '/'
 
     const token = request.cookies.get('token')?.value || "";
 
     if (isPublicPath && token) {
-        return NextResponse.redirect(new URL('/profile', request.url))
+        return NextResponse.redirect(new URL('/dashboard', request.url))
     }
 
     if (!isPublicPath && !token) {
-        return NextResponse.redirect(new URL('/signIn', request.url))
+        return NextResponse.redirect(new URL('/', request.url))
     }
 }
 

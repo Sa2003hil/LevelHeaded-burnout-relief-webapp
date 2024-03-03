@@ -11,6 +11,8 @@ import { useEffect } from "react";
 import toast, { Toaster } from 'react-hot-toast';
 import { useAuth } from "@/context/authContext";
 import secureLocalStorage from "react-secure-storage";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function SignIn() {
     const { updateAuthData } = useAuth();
@@ -29,6 +31,11 @@ export default function SignIn() {
             setButtonDisabled(true)
         }
     }, [user])
+
+    useEffect(() => {
+        AOS.init();
+    }
+        , [])
 
 
     const onLogin = async () => {
@@ -57,23 +64,26 @@ export default function SignIn() {
         <div className="flex gap-10 w-[100vw] relative">
             <Toaster />
             <div>
-                <Typography variant="h4" color="blue-gray" className="flex absolute px-10 py-24 flex-col text-3xl gap-1 mb-8">
-                    Sign In to
-                    <span>directly procced</span>
-                </Typography>
-                <Typography color="gray" className="mt-4  px-10 py-48  absolute font-medium flex flex-col" id="registerDiv">
-                    if you don't an account
-                    <span>you can <Link href="/register" className="text-blue-800 font-semibold"> Register here!</Link></span>
-                </Typography>
+                <div data-aos="fade">
+                    <Typography variant="h4" color="blue-gray" className="flex absolute px-10 py-24 flex-col text-3xl gap-1 mb-8">
+                        Sign In to
+                        <span>directly procced</span>
+                    </Typography>
+                    <Typography color="gray" className="mt-4  px-10 py-48  absolute font-medium flex flex-col" id="registerDiv">
+                        if you don't an account
+                        <span>you can <Link href="/register" className="text-blue-800 font-semibold"> Register here!</Link></span>
+                    </Typography>
+                </div>
                 <Image
                     className=" object-fill"
                     height={700}
                     width={700}
                     src={Img}
+                    data-aos="fade-down"
                 />
 
             </div>
-            <div className="relative h-[90vh] flex flex-col text-gray-700 bg-white shadow-md w-[30vw] rounded-xl bg-clip-border">
+            <div data-aos="fade-left" className="relative h-[90vh] flex flex-col text-gray-700 bg-white shadow-md w-[30vw] rounded-xl bg-clip-border">
                 <Typography color="blue-gray" className="flex justify-center m-auto text-gray-500 text-2xl font-thin  gap-1 mb-3">
                     Sign In
                 </Typography>
