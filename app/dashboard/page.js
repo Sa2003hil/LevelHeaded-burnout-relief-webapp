@@ -10,10 +10,12 @@ import Img from '../../assets/Saly-16.png'
 import Link from 'next/link'
 import Cards from '@/components/dashboard/Cards';
 import Chart from '@/components/Charts/Chart'
+import { useAuth } from '@/context/authContext';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const dashboard = () => {
+    const { authData } = useAuth();
     useEffect(() => {
         AOS.init();
     }, [])
@@ -42,7 +44,7 @@ const dashboard = () => {
                 <div className="flex-1">
                     <div className='flex mx-10 justify-center items-center my-5 gap-14  '>
                         <div className='w-[40%]  rounded-xl shadow-xl h-full p-6' data-aos="fade-left">
-                            <p className='font-semibold text-blue-950 text-xl mx-2 my-2'>Hello Jon</p>
+                            <p className='font-semibold text-blue-950 text-xl mx-2 my-2'>Hello  @{authData?.userN?.username}</p>
                             <p className='text-sm  mx-2'>Don’t forget to track your working hours today.</p>
                             <button className='p-2  w-32 justify-center items-center  mt-3 flex text-center  text-white bg-[#5D50C6] hover:transition hover:ease-in-out hover:bg-[#7164d8] rounded-full '>
                                 Proceed <IoIosArrowRoundForward size={20} className='ml-1 hover:ml-1 hover:transition hover:ease-in ' />

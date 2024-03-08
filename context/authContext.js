@@ -1,11 +1,17 @@
-// authContext.js
 "use client"
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState, useEffect } from 'react';
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-    const [authData, setAuthData] = useState({ token: null, user: null });
+    const [authData, setAuthData] = useState(() => {
+        const storedAuthData = localStorage.getItem('authData');
+        return storedAuthData ? JSON.parse(storedAuthData) : { token: null, user: null };
+    });
+
+    useEffect(() => {
+        localStorage.setItem('authData', JSON.stringify(authData));
+    }, [authData]);
 
     const updateAuthData = (newAuthData) => {
         setAuthData(newAuthData);
