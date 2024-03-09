@@ -8,6 +8,7 @@ import axios from "axios";
 import toast, { Toaster } from 'react-hot-toast';
 import { useRouter } from "next/navigation";
 import { set } from "mongoose";
+import { TailSpin } from 'react-loader-spinner';
 
 
 
@@ -63,7 +64,7 @@ export default function Register() {
 
 
     return (
-        <div className="flex gap-10 px-20 w-[100vw] relative">
+        <div className="flex gap-10 px-20 w-[100vw] items-center justify-center relative">
             <Toaster />
             <div class="relative h-[100vh] mt-10 flex flex-col text-gray-700 bg-white shadow-md w-[30vw] rounded-xl bg-clip-border">
                 <Typography color="blue-gray" className="flex justify-center m-auto text-gray-500 text-2xl font-thin  gap-1 mb-3">
@@ -143,7 +144,16 @@ export default function Register() {
                         onClick={onSignup}
                         class="block w-full select-none rounded-lg bg-gradient-to-tr from-gray-900 to-gray-800 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                         type="button">
-                        {loading}
+                        {loading ? <TailSpin
+                            visible={true}
+                            height="20"
+                            width="20"
+                            color="grey"
+                            ariaLabel="tail-spin-loading"
+                            radius="1"
+                            wrapperStyle={{}}
+                            wrapperClass=""
+                        /> : "Sign Up"}
                     </button>
                     <p class="flex justify-center mt-6 font-sans text-sm antialiased font-light leading-normal text-inherit">
                         Don't have an account?
@@ -176,7 +186,7 @@ export default function Register() {
                 </Typography> */}
                 <Image
                     className=" object-fill"
-                    height={700}
+                    height={600}
                     width={700}
                     src={Img}
                 />
