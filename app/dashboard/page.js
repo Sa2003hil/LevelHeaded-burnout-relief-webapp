@@ -6,9 +6,11 @@ import { PiClockClockwise } from "react-icons/pi";
 import { CiSettings } from "react-icons/ci";
 import { CiLogout } from "react-icons/ci";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import Indicator from '@/assets/group.png';
 import Img from '../../assets/Saly-16.png'
 import Link from 'next/link'
 import Cards from '@/components/dashboard/Cards';
+import Boy from '@/assets/Boy.png'
 import Chart from '@/components/Charts/Chart'
 import { useAuth } from '@/context/authContext';
 import { useRouter } from "next/navigation";
@@ -47,7 +49,22 @@ const dashboard = () => {
         <div className='flex flex-col'>
             <div className="flex ">
                 <div className='w-1/5 h-screen rounded-r-3xl shadow-2xl' data-aos="fade-right">
+
+                    <div className='flex p-6 gap-6 items-center justify-center shadow-md rounded-xl'>
+                        <Image src={Boy} width={40} height={40} className='rounded-full' />
+
+                        <div>
+                            <p className='text-base font-light  text-blue-950 '>Current Level : 2</p>
+                            <p className='font-semibold text-blue-950 '>{authData?.userN?.username}</p>
+                        </div>
+                    </div>
                     <div className='flex flex-col mt-6 gap-6 justify-center items-center'>
+
+
+
+                        <div className='flex m-auto items-center justify-center'>
+                            <Image src={Indicator} height={200} width={200} alt='' />
+                        </div>
 
                         <Link href="/home" data-aos="fade-up" className='shadow-xl  rounded-lg p-5 transition-transform transform hover:scale-110'>
                             <IoPersonOutline color='#9FAACA' size={20} />

@@ -22,10 +22,10 @@ export default function Profile() {
         , []);
 
     return (
-        <div className="flex py-10 gap-12 m-auto w-full relative">
+        <div className="flex py-8 justify-center items-center gap-12 m-auto w-full relative">
             <Toaster />
 
-            <div class="relative h-[70vh] flex flex-col text-gray-700 bg-white shadow-md w-[30vw] rounded-xl bg-clip-border" data-aos="fade-up">
+            <div class="relative h-[70vh] ml-20 flex flex-col text-gray-700 bg-white shadow-md w-[34vw] rounded-xl bg-clip-border" data-aos="fade-up">
                 <Typography color="blue-gray" className="flex justify-center m-auto text-gray-500 text-2xl font-thin  gap-1 mb-3">
                     Update Your Profile
                 </Typography>
@@ -85,7 +85,7 @@ export default function Profile() {
                     <span>you can <Link href="/register" className="text-blue-800 font-semibold"> do here!</Link></span>
                 </Typography>
                 <Image
-                    className=" object-fill"
+                    className=" object-fill "
                     height={700}
                     width={700}
                     src={prof}
