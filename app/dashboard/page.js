@@ -11,14 +11,38 @@ import Link from 'next/link'
 import Cards from '@/components/dashboard/Cards';
 import Chart from '@/components/Charts/Chart'
 import { useAuth } from '@/context/authContext';
+import { useRouter } from "next/navigation";
+import axios from 'axios';
+import secureLocalStorage from "react-secure-storage";
+import { toast } from 'react-hot-toast';
 import AOS from 'aos';
+
 import 'aos/dist/aos.css';
 
 const dashboard = () => {
-    const { authData } = useAuth();
+    const { authData, logout } = useAuth();
+    const router = useRouter();
     useEffect(() => {
         AOS.init();
-    }, [])
+    }, []);
+
+
+    const handleSignOut = async () => {
+        // Add your sign-out logic here
+        try {
+            logout();
+            secureLocalStorage.clear();
+            await axios.get('/api/users/logout');
+            toast.success("Logged out successfully");
+            setTimeout(() => {
+                router.push('/signIn');
+            });
+
+        } catch (error) {
+            console.log(error.message);
+            toast.error(error.message)
+        }
+    };
     return (
         <div className='flex flex-col'>
             <div className="flex ">
@@ -34,9 +58,9 @@ const dashboard = () => {
                         <Link href="/home" data-aos="fade-up" className='shadow-xl  rounded-lg p-5 transition-transform transform hover:scale-110'>
                             <CiSettings color='#9FAACA' size={30} />
                         </Link>
-                        <Link href="/home" data-aos="fade-up" className='shadow-xl  rounded-lg p-5 transition-transform transform hover:scale-110'>
+                        <button data-aos="fade-up" onClick={handleSignOut} className='shadow-xl  rounded-lg p-5 transition-transform transform hover:scale-110'>
                             <CiLogout color='#9FAACA' size={30} />
-                        </Link>
+                        </button>
 
 
                     </div>
