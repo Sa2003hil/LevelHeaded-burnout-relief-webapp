@@ -71,24 +71,24 @@ export default function Navbar() {
                     <Image
                         src={Logo}
                         alt="Evetease"
-                        height={1000}
-                        width={1000}
-                        className="w-8 h-8 rounded-full object-contain mr-2"
+                        height={2000}
+                        width={2000}
+                        className="w-10 h-10 rounded-full object-contain mr-2"
                     />
-                    <p className="font-semibold">POMODORO</p>
+                    <p className="font-semibold">LevelHeaded</p>
                 </div>
                 <ul className="flex items-center justify-start gap-16 w-full font-normal text-gray-800 ml-20">
                     <li>
                         <Link href="/">Home</Link>
                     </li>
                     <li>
-                        <Link href="/">Discover</Link>
+                        <Link href="/">Track</Link>
                     </li>
                     <li>
-                        <Link href="/">Events</Link>
+                        <Link href="/">Counselling</Link>
                     </li>
                     <li>
-                        <Link href="/contact">Contact</Link>
+                        <Link href="/contact">FAQ</Link>
                     </li>
                 </ul>
                 <div className="ml-auto" >

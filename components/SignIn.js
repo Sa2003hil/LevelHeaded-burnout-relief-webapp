@@ -89,8 +89,8 @@ export default function SignIn() {
                     Sign In
                 </Typography>
                 <hr className=" mb-2 w-[50%] m-auto" />
-                <Typography color="blue-gray" className="flex justify-center m-auto text-4xl gap-1 mb-8">
-                    Welcome to <span className=" text-pink-400 font-medium">Pomodoro</span>
+                <Typography color="blue-gray" className="flex justify-center m-auto text-3xl gap-1 mb-8">
+                    Welcome to <span className=" text-pink-400 font-medium">LevelHeaded</span>
                 </Typography>
                 <div className="flex flex-col gap-4 p-6">
                     <div className="relative h-11 w-full min-w-[200px]">

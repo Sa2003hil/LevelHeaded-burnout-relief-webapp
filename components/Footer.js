@@ -17,7 +17,7 @@ const SITEMAP = [
         title: "Meet Us ",
         links: [
             "+91 123456789",
-            "Evetease.com",
+            "LevelHeaded.com",
             "Chitkara University\nPunjab, 140041",
         ],
     },
@@ -38,15 +38,15 @@ export default function Footer() {
                                 alt="Evetease"
                                 height={1000}
                                 width={1000}
-                                className="w-8 h-8 rounded-full object-contain mr-2"
+                                className="w-16 h-16 rounded-full object-contain mr-2"
                             />
-                            <p className=" text-2xl uppercase tracking-widest font-bold text-[#F85E9F]">
-                                Pomodoro
+                            <p className=" text-2xl tracking-widest font-bold text-[#F85E9F]">
+                                LevelHeaded
                             </p>
                         </div>
                         <p className="w-3/4 text-lg text-gray-700">
-                            Discover, Engage, and Elevate your college experience with our
-                            all-in-one upcoming events hub. Stay connected to campus life!
+                            We help feel more connected to your professional life through keeping
+                            track of your time and communicating better.
                         </p>
                     </div>
                     {SITEMAP.map(({ title, links }, key) => (

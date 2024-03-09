@@ -27,10 +27,11 @@ const Component = () => {
                         How it works
                     </span>
                     <h2 className="text-dark mb-3 text-3xl leading-[1.2] font-bold sm:text-4xl md:text-[40px]">
-                        Pomodoro
+                        LevelHeaded
                     </h2>
                     <p className="text-gray-400 text-base ">
-                        Build a better relationship
+                        We offer a wide range of services, learn about how can you make
+                        the most out of it.
                         with your work
                     </p>
                 </div>
@@ -48,11 +49,11 @@ const Component = () => {
                             </div>
                             <div className="md:7/12 lg:w-1/2">
                                 <h2 data-aos="fade" className="text-3xl font-bold text-gray-900 md:text-4xl dark:text-black">
-                                    Introducing Pomodoro
+                                    Introducing
                                 </h2>
-                                <p className="my-8 text-gray-600 dark:text-black">
+                                {/* <p className="my-8 text-gray-600 dark:text-black">
                                     Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                                </p>
+                                </p> */}
                                 <div className="divide-y space-y-4 divide-gray-100 dark:divide-gray-800">
                                     <div className="mt-8 flex gap-4 md:items-center">
                                         <div className="w-12 h-12 flex gap-4 p-2 rounded-full items-center justify-center bg-indigo-100 dark:bg-indigo-900/20">

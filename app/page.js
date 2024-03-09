@@ -34,9 +34,9 @@ export default function Home() {
         <Pahad />
       </div>
 
-      <div className=" w-[95%]">
+      {/* <div className=" w-[95%]">
         <Cards />
-      </div>
+      </div> */}
 
 
       {/* <div className='h-full w-screen px-40'>
