@@ -11,6 +11,7 @@ import { useEffect } from "react";
 import toast, { Toaster } from 'react-hot-toast';
 import { useAuth } from "@/context/authContext";
 import secureLocalStorage from "react-secure-storage";
+import { TailSpin } from 'react-loader-spinner';
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -49,7 +50,7 @@ export default function SignIn() {
             toast.success("Login Successful");
             setTimeout(() => {
                 router.push("/");
-            }, 1000);
+            }, 700);
         } catch (error) {
             console.log("login failed", error.message);
             toast.error(error.message);
@@ -61,7 +62,7 @@ export default function SignIn() {
 
 
     return (
-        <div className="flex gap-10 w-[100vw] relative">
+        <div className="flex  gap-10 w-full items-center justify-center relative">
             <Toaster />
             <div>
                 <div data-aos="fade">
@@ -76,14 +77,14 @@ export default function SignIn() {
                 </div>
                 <Image
                     className=" object-fill"
-                    height={700}
-                    width={700}
+                    height={800}
+                    width={800}
                     src={Img}
                     data-aos="fade-down"
                 />
 
             </div>
-            <div data-aos="fade-left" className="relative h-[90vh] flex flex-col text-gray-700 bg-white shadow-md w-[30vw] rounded-xl bg-clip-border">
+            <div data-aos="fade-left" className="relative h-[90vh] flex flex-col text-gray-700 bg-white shadow-md w-[33vw] rounded-xl bg-clip-border">
                 <Typography color="blue-gray" className="flex justify-center m-auto text-gray-500 text-2xl font-thin  gap-1 mb-3">
                     Sign In
                 </Typography>
@@ -146,9 +147,18 @@ export default function SignIn() {
                 <div className="p-6 pt-0">
                     <button
                         onClick={onLogin}
-                        className="block w-full select-none rounded-lg bg-gradient-to-tr from-gray-900 to-gray-800 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                        className=" flex m-auto justify-center items-center w-full select-none rounded-lg bg-gradient-to-tr from-gray-900 to-gray-800 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
                         type="button">
-                        Sign In
+                        {loading ? <TailSpin
+                            visible={true}
+                            height="20"
+                            width="20"
+                            color="grey"
+                            ariaLabel="tail-spin-loading"
+                            radius="1"
+                            wrapperStyle={{}}
+                            wrapperClass=""
+                        /> : "Sign In"}
                     </button>
                     <p className="flex justify-center mt-6 font-sans text-sm antialiased font-light leading-normal text-inherit">
                         Don't have an account?
