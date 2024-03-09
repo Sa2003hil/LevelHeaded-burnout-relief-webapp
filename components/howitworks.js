@@ -3,6 +3,11 @@
 import React from 'react';
 import Image from 'next/image';
 import howitworks from '@/assets/howitworks.png';
+
+import lapigirl from '@/assets/lapigirl.png'
+import time from '@/assets/Time.png'
+import stat from '@/assets/stat.png'
+import chat from '@/assets/Bubble.png'
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -39,7 +44,7 @@ const Component = () => {
                         </svg>
                         <div className="space-y-6 justify-between text-gray-600 md:flex flex-row-reverse md:gap-6 md:space-y-0 lg:gap-12 lg:items-center">
                             <div data-aos="fade-left" className="md:5/12 lg:w-1/2 ">
-                                <Image src={howitworks} alt="Pomodoro:how it works section" style={{ borderRadius: 150, boxShadow: '7px 7px 1px blueviolet' }} width={'500'} height={'500'} />
+                                <Image src={lapigirl} alt="Pomodoro:how it works section" style={{ borderRadius: 150, boxShadow: '7px 7px 1px blueviolet' }} width={'500'} height={'500'} />
                             </div>
                             <div className="md:7/12 lg:w-1/2">
                                 <h2 data-aos="fade" className="text-3xl font-bold text-gray-900 md:text-4xl dark:text-black">
@@ -50,21 +55,39 @@ const Component = () => {
                                 </p>
                                 <div className="divide-y space-y-4 divide-gray-100 dark:divide-gray-800">
                                     <div className="mt-8 flex gap-4 md:items-center">
-                                        <div className="w-12 h-12 flex gap-4 rounded-full bg-indigo-100 dark:bg-indigo-900/20">
+                                        <div className="w-12 h-12 flex gap-4 p-2 rounded-full items-center justify-center bg-indigo-100 dark:bg-indigo-900/20">
+                                            {/* <Image src={time} alt='' width={40} height={50} /> */}
                                         </div>
                                         <div data-aos="fade-up" className="w-5/6">
                                             <h4 className="font-semibold text-lg text-gray-700 dark:text-indigo-300">
-                                                Network</h4>
-                                            <p className="text-gray-500 dark:text-gray-400">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                                Pomodoro Counter</h4>
+                                            <p className="text-gray-500 dark:text-gray-400">After logging in, head over to dashboard  and start the
+                                                pomodoro counter</p>
                                         </div>
                                     </div>
                                     <div className="pt-4 flex gap-4 md:items-center">
                                         <div className="w-12 h-12 flex gap-4 rounded-full bg-teal-100 dark:bg-teal-900/20">
                                         </div>
                                         <div data-aos="fade-up" className="w-5/6">
-                                            <h4 className="font-semibold text-lg text-gray-700 dark:text-teal-300">Exciting
-                                                Events</h4>
-                                            <p className="text-gray-500 dark:text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur.</p>
+                                            <h4 className="font-semibold text-lg text-gray-700 dark:text-teal-300">Statistics</h4>
+                                            <p className="text-gray-500 dark:text-gray-400">Receive daily statistics on how long you are working.
+                                                Keep track of your levels</p>
+                                        </div>
+                                    </div>
+                                    <div className="pt-4 flex gap-4 md:items-center">
+                                        <div className="w-12 h-12 flex gap-4 rounded-full bg-yellow-300 dark:bg-teal-900/20">
+                                        </div>
+                                        <div data-aos="fade-up" className="w-5/6">
+                                            <h4 className="font-semibold text-lg text-yellow-300 dark:text-yellow-400">Level System</h4>
+                                            <p className="text-gray-500 dark:text-gray-400">Understand how our level system works</p>
+                                        </div>
+                                    </div>
+                                    <div className="pt-4 flex gap-4 md:items-center">
+                                        <div className="w-12 h-12 flex gap-4 rounded-full bg-teal-100 dark:bg-teal-900/20">
+                                        </div>
+                                        <div data-aos="fade-up" className="w-5/6">
+                                            <h4 className="font-semibold text-lg text-gray-700 dark:text-blue-200">Community</h4>
+                                            <p className="text-gray-500 dark:text-gray-400">Communicate with fellow  community member or schedule a professional therapy session </p>
                                         </div>
                                     </div>
                                 </div>

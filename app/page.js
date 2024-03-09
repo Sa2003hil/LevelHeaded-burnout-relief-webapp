@@ -11,6 +11,7 @@ import Cards from '@/components/Cards'
 import { React, useEffect } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Pahad from '@/components/Pahad'
 
 export default function Home() {
   useEffect(() => {
@@ -25,9 +26,14 @@ export default function Home() {
       <div className="w-full h-full">
         <Howitworks />
       </div>
-      <div className="flex w-[90%]">
+      <div className="flex w-full items-center justify-center">
         <Cta />
       </div>
+      <div className="flex w-full items-center justify-center">
+        {/* <Cta /> */}
+        <Pahad />
+      </div>
+
       <div className=" w-[95%]">
         <Cards />
       </div>

@@ -8,12 +8,14 @@ const Cta = () => {
                     <div className="relative z-10 overflow-hidden rounded bg-[#6a7498] py-12 px-8 md:p-[70px]">
                         <div data-aos="fade" className="flex flex-wrap items-center -mx-4">
                             <div className="w-full px-4 lg:w-1/2">
-                                <span className="block mb-4 text-base font-medium text-white">
+                                {/* <span className="block mb-4 text-base font-medium text-white">
                                     Find Your Next Dream App
-                                </span>
-                                <h2 className="mb-6 text-3xl font-bold leading-tight text-white sm:mb-8 sm:text-[40px]/[48px] lg:mb-0">
-                                    <span className="xs:block"> Connect us today for</span>
-                                    <span> an elite range of software solutions</span>
+                                </span> */}
+                                <h2 className="mb-6 text-2xl w-[60vw] font-bold leading-tight text-white sm:mb-8 sm:text-[28px]/[40px] lg:mb-0">
+                                    <span className="xs:block w-full"> Communicate your own burnout </span>
+                                    <span> stories
+                                        with fellow corporate workers, head over to
+                                        communities</span>
                                 </h2>
                             </div>
                             <div className="w-full px-4 lg:w-1/2">
@@ -23,7 +25,7 @@ const Cta = () => {
                                         href="mailto:team@thexitingway.com"
                                         className="inline-flex py-3 my-1 mr-4 text-base font-medium transition bg-white rounded-md hover:bg-shadow-1 text-primary px-7"
                                     >
-                                        Connect us on email
+                                        Proceed
                                     </a>
                                 </div>
                             </div>
