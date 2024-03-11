@@ -13,7 +13,7 @@ import { React, useEffect } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Pahad from '@/components/Pahad'
-
+import WhyWeBest from '@/components/WhyWeBest'
 export default function Home() {
   useEffect(() => {
     AOS.init({
@@ -40,6 +40,10 @@ export default function Home() {
           </div> */}
       <div>
         <Features />
+      </div>
+
+      <div className='mb-16 flex items-center justify-center m-auto'>
+        <WhyWeBest />
       </div>
 
       {/* <div className='h-full w-screen px-40'>
