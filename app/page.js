@@ -8,6 +8,7 @@ import Reviews from '@/components/Crousel'
 import Cta from '@/components/Cta'
 import Howitworks from '@/components/howitworks'
 import Cards from '@/components/Cards'
+import Features from '@/components/Features'
 import { React, useEffect } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -36,8 +37,10 @@ export default function Home() {
 
       {/* <div className=" w-[95%]">
         <Cards />
-      </div> */}
-
+          </div> */}
+      <div>
+        <Features />
+      </div>
 
       {/* <div className='h-full w-screen px-40'>
         <SubscribeNew />
