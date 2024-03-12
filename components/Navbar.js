@@ -32,7 +32,7 @@ export default function Navbar() {
         };
     }, []);
 
-    const tokenEncryption = secureLocalStorage.getItem("token");
+    const tokenEncryption = localStorage.getItem("authData");
 
     // useEffect(() => {
     //     window.addEventListener("scroll", handleScroll);

@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { cookies } from 'next/headers'
 
 export async function GET() {
     try {
@@ -6,6 +7,8 @@ export async function GET() {
             message: "Logged out successfully",
             success: true
         })
+
+        // cookies().delete("token")
 
         response.cookies.set("token", "", {
             httpOnly: true,

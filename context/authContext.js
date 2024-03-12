@@ -1,6 +1,7 @@
 "use client"
 import { createContext, useContext, useState, useEffect } from 'react';
 
+
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
@@ -21,6 +22,7 @@ export const AuthProvider = ({ children }) => {
     const logout = () => {
         setAuthData({ token: null, user: null });
         localStorage.removeItem('authData');
+
     };
 
     return (

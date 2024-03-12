@@ -12,7 +12,6 @@ import ProgressBar from '../../assets/ProgressBar.png'
 import { useAuth } from '@/context/authContext';
 import { useRouter } from "next/navigation";
 import axios from 'axios';
-import secureLocalStorage from "react-secure-storage";
 import { toast } from 'react-hot-toast';
 import stopwatch from '../../assets/stopwatch.png'
 import sideImg from '../../assets/sideimg.png'
@@ -32,7 +31,6 @@ const dashboard = () => {
         // Add your sign-out logic here
         try {
             logout();
-            secureLocalStorage.clear();
             await axios.get('/api/users/logout');
             toast.success("Logged out successfully");
             setTimeout(() => {

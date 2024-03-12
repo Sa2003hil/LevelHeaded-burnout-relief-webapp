@@ -10,7 +10,6 @@ import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import toast, { Toaster } from 'react-hot-toast';
 import { useAuth } from "@/context/authContext";
-import secureLocalStorage from "react-secure-storage";
 import { TailSpin } from 'react-loader-spinner';
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -45,7 +44,7 @@ export default function SignIn() {
             const res = await axios.post("/api/users/signIn", user);
             console.log("login success", res.data);
             const { token, userN } = res.data;
-            secureLocalStorage.setItem('token', token);
+            // secureLocalStorage.setItem('token', token);
             updateAuthData({ token, userN });
             toast.success("Login Successful");
             setTimeout(() => {
