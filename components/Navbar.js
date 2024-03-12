@@ -82,7 +82,7 @@ export default function Navbar() {
                         <Link href="/">Home</Link>
                     </li>
                     <li>
-                        <Link href="/">Track</Link>
+                        <Link href="/track">Track</Link>
                     </li>
                     <li>
                         <Link href="/">Counselling</Link>
